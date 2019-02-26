@@ -18,6 +18,7 @@ results_path = current_path + "/data/results.txt"
 quiz = Quiz.new(questions_path)
 result = Result.new(results_path)
 
+system "cls"
 puts "\nПривет, #{name}! Этот тест поможет определить ваш уровень коммуникабельности. " \
 "Для этого необходимо правдиво ответить на следующие вопросы."
 

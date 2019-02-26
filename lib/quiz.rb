@@ -17,7 +17,7 @@ class Quiz
 
   # Конец теста
   def finished?
-    return @question >= @questions.size
+    @question >= @questions.size
   end
 
   # Следующий вопрос
@@ -45,7 +45,5 @@ class Quiz
   end
 
   # Геттер для накопителя баллов
-  def comunicate_level
-    return @comunicate_level
-  end
+  attr_accessor :comunicate_level
 end

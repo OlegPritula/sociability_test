@@ -23,7 +23,6 @@ class Result
     when 14..18
       puts @results[3]
     when 9..13
-
       puts @results[4]
     when 4..8
       puts @results[5]
