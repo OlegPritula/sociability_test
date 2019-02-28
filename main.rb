@@ -1,5 +1,5 @@
-  require_relative "lib/quiz"
-  require_relative "lib/result"
+require_relative "lib/quiz"
+require_relative "lib/result"
 
 name = ARGV[0]
 
