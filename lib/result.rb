@@ -1,12 +1,7 @@
 class Result
   def initialize(results_path)
-    unless File.exist?(results_path)
-      abort "Файл с результатами #{results_path} не найден."
-    end
-
-    file = File.new(results_path, "r:UTF-8")
-    @results = file.readlines
-    file.close
+    # Чтение строк файла ответов в массив
+    @results = File.readlines(results_path, encoding: 'UTF-8', chomp: true)
   end
 
   def print(quiz)
