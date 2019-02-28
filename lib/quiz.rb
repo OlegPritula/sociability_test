@@ -23,7 +23,7 @@ class Quiz
 
     # Ввод пользователем варианта ответа из допустимых
     user_input = nil
-    until [0, 1, 2].include?(user_input)
+    until (0..2).include?(user_input)
       if [4, 9, 10, 12].include?(@question)
         puts "\nБудьте внимательны!!! Варианты ответов: 0 - да, 1 - иногда, 2 - нет)"
       else

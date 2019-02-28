@@ -1,9 +1,5 @@
-begin
   require_relative "lib/quiz"
   require_relative "lib/result"
-rescue LoadError
-  abort "Необходимый файл не найден #{$!.inspect}"
-end
 
 name = ARGV[0]
 
@@ -14,8 +10,12 @@ end
 questions_path = __dir__ + "/data/questions.txt"
 results_path = __dir__ + "/data/results.txt"
 
+begin
 quiz = Quiz.new(questions_path)
 result = Result.new(results_path)
+rescue (Errno::ENOENT)
+  abort "Необходимый файл не найден #{$!.inspect}"
+end
 
 system "cls"
 name ||= "Инкогнито"
