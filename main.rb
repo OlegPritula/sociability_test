@@ -11,9 +11,9 @@ questions_path = __dir__ + "/data/questions.txt"
 results_path = __dir__ + "/data/results.txt"
 
 begin
-quiz = Quiz.new(questions_path)
+  quiz = Quiz.new(questions_path)
   result = Result.new(results_path)
-  rescue (Errno::ENOENT)
+rescue (Errno::ENOENT)
   abort "Необходимый файл не найден #{$!.inspect}"
 end
 
